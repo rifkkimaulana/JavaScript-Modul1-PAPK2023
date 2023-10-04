@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Penugasan Javascript Atribut 22100111</title>
+
+    <script>
+      // Deklarasi variabel
+      var nilai1 = 0;
+      var nilai2 = 0;
+      var nilai3 = 0;
+      var nilai4 = 0;
+      var nilai5 = 0;
+      var total = 0;
+      var rata2 = 0;
+
+      // Fungsi untuk menghitung total dan rata-rata
+      function hitung() {
+        // Mengambil nilai dari input
+        nilai1 = parseInt(document.getElementById("nilai1").value);
+        nilai2 = parseInt(document.getElementById("nilai2").value);
+        nilai3 = parseInt(document.getElementById("nilai3").value);
+        nilai4 = parseInt(document.getElementById("nilai4").value);
+        nilai5 = parseInt(document.getElementById("nilai5").value);
+
+        // Menghitung total dan rata-rata
+        total = nilai1 + nilai2 + nilai3 + nilai4 + nilai5;
+        rata2 = total / 5;
+
+        // Menampilkan hasil di elemen HTML
+        document.getElementById("total").innerHTML = "Total: " + total;
+        document.getElementById("rata2").innerHTML = "Rata-rata: " + rata2;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Menghitung Nilai</h1>
+    <p>Masukkan lima nilai di bawah ini:</p>
+    <input type="number" id="nilai1" value="0" />
+    <input type="number" id="nilai2" value="0" />
+    <input type="number" id="nilai3" value="0" />
+    <input type="number" id="nilai4" value="0" />
+    <input type="number" id="nilai5" value="0" />
+    <button onclick="hitung()">Hitung</button>
+    <p id="total">Total: 0</p>
+    <p id="rata2">Rata-rata: 0</p>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Percabangan IF ELSE IF 22100111</title>
+  </head>
+  <body>
+    <script>
+      var username = prompt("username");
+      var password = prompt("password");
+
+      if (username == "rifkkimaulana") {
+        if (password == "maulana") {
+          document.write(`<h2> Selamat datang admin</h2>`);
+        } else {
+          document.write(
+            `<h2> Password yang anda masukan salah, silahkan coba lagi.</h2>`
+          );
+        }
+      } else {
+        document.write(
+          `<h2> Akun anda tidak terdaftar, silahkan melakukan registrasi</h2>`
+        );
+      }
+    </script>
+  </body>
+</html>
