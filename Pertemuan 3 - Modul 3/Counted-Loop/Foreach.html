@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perulangan Foreach Javascript</title>
+  </head>
+  <body>
+    <script>
+      // Variabel array untuk bahasa yang akan di foreeach
+      var bahasa = ["Javascript", "HTML", "CSS", "Typescript"];
+
+      for (i in bahasa) {
+        document.write(i + ". " + bahasa[i] + "<br/>");
+      }
+
+      // variabel array hari untuk menampilkan bahasa yang akan di foreach
+      var hari = [
+        "Senin",
+        "Selasa",
+        "Rabu",
+        "Kamis",
+        "Jum'at",
+        "Sabtu",
+        "Minggu",
+      ];
+
+      hari.forEach(function (d) {
+        document.write("<p>" + d + "</p>");
+      });
+    </script>
+  </body>
+</html>
