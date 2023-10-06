@@ -1,1 +1,1 @@
-# Java Script Dasar Pembelajaran & Latihan Mata Kuliah "Pengembangan Aplikasi Platform Khusus",. (FTI UNSAP SUMEDANG)
+KULIAH SEMESTER 5 - UNIVERSITAS SEBELAS APRIL SUMEDANG. MODUL 2. PERTEMUAN 2. JAVASCRIPT
