@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Perkalian Sederhana Include Modul 2</title>
+  </head>
+  <body>
+    <form onsubmit="return false">
+      <label> Masukan Nilai: </label><br />
+      <input type="text" id="harga" value="" /><br />
+      <input type="text" id="jumlah" value="" /><br />
+      <button id="submit">Submit</button>
+    </form>
+
+    <h3>Total Pembelian Adalah : <span id="hasil">0</span></h3>
+    <br />
+    <h3><span id="hadiah"></span></h3>
+
+    <script>
+      var submitButton = document.getElementById("submit");
+
+      submitButton.addEventListener("click", output_form);
+
+      function output_form() {
+        var harga = document.getElementById("harga").value;
+        var jumlah = document.getElementById("jumlah").value;
+        var hasil = harga * jumlah;
+
+        document.getElementById("hasil").innerHTML = hasil;
+
+        // Memeriksa apakah hasil kosong
+        if (hasil >= 10) {
+          document.getElementById("hadiah").innerHTML =
+            "Selamat anda mendapatkan hadiah";
+          return;
+        } else {
+          document.getElementById("hadiah").innerHTML = "";
+        }
+      }
+    </script>
+  </body>
+</html>

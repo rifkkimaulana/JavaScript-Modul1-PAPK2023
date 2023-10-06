@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Perkalian Sederhana Include Modul 2</title>
+  </head>
+  <body>
+    <form onsubmit="return false">
+      <label> Masukan Nilai: </label><br />
+      <input type="text" id="input1" value="" /><br />
+      <input type="text" id="input2" value="" /><br />
+      <button id="submit">Submit</button>
+    </form>
+
+    <script>
+      document.getElementById("submit");
+      addEventListener("click", output_form);
+
+      function output_form() {
+        var input1 = document.getElementById("input1").value;
+        var input2 = document.getElementById("input2").value;
+        var hasil = input1 * input2;
+
+        document.getElementById("hasil1").innerHTML = input1;
+        document.getElementById("hasil2").innerHTML = input2;
+        document.getElementById("hasil").innerHTML = hasil;
+      }
+    </script>
+
+    <h3>
+      Hasil Perkalian <span id="hasil1">0</span> dikali
+      <span id="hasil2">0</span> Adalah : <span id="hasil">0</span>
+    </h3>
+  </body>
+</html>
