@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membuat Objek Javascript</title>
+  </head>
+  <body>
+    <script>
+      function Person(firsName, lastName) {
+        this.firsName = firsName;
+        this.lastName = lastName;
+
+        //method
+        this.fullName = function () {
+          return `${this.firsName} ${this.lastName}`;
+        };
+        this.showName = function () {
+          document.write(this.fullName());
+        };
+      }
+
+      var person1 = new Person("Muhtar", "Dian");
+      var person2 = new Person("Rifki", "Maulana");
+
+      person1.showName();
+      document.write("<br/>");
+      person2.showName();
+    </script>
+  </body>
+</html>

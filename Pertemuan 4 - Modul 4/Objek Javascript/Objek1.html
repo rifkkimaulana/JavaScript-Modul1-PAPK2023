@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membuat Objek Pada Javascript</title>
+  </head>
+  <body>
+    <script>
+      var car = {
+        type: "Flat",
+        model: "500",
+        color: "white",
+
+        start: function () {
+          document.write("Ini adalah method start");
+        },
+
+        drive: function () {
+          document.write("Ini adalah method drive");
+        },
+
+        brake: function () {
+          document.write("Ini adalah method brake");
+        },
+
+        stop: function () {
+          document.write("Ini adalah method stop");
+        },
+      };
+    </script>
+
+    <script>
+      // tampilkan type car
+      document.write(car.type + "<br/>");
+      // tampilkan model car
+      document.write(car.model + "<br/>");
+      // tampilkan color car
+      document.write(car.color + "<br/>");
+
+      // tampilkan method start
+      car.start();
+      document.write("<br/>");
+      1;
+      // tampilkan method drive
+      car.drive();
+      document.write("<br/>");
+      // tampilkan method brake
+      car.brake();
+      document.write("<br/>");
+      // tampilkan method stop
+      car.stop();
+    </script>
+  </body>
+</html>

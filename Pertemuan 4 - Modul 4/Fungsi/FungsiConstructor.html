@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript dengan Constructor</title>
+  </head>
+  <body>
+    <h2>Menggunakan Constructor</h2>
+    <script>
+      var fungsiKonstruktor = new Function("x", "y", "return x - y;");
+
+      // Contoh pemanggilan
+      var hasilKonstruktor = fungsiKonstruktor(8, 3);
+      document.write("Hasil Fungsi Konstruktor:", hasilKonstruktor);
+    </script>
+  </body>
+</html>
