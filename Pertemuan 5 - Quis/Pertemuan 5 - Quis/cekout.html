@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.jpg"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Rental Mobil</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:600,700"
+    />
+  </head>
+  <body class="lead">
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="./index.html">
+        <img
+          src="./assets/images/logo.png"
+          width="40"
+          height="30"
+          class="d-inline-block align-top"
+          alt="Logo"
+        />
+        APLIKASI RENTAL MOBIL
+      </a>
+    </nav>
+
+    <script>
+      document.write('<div class="container mt-5">');
+      document.write("<h2>Transaksi Sukses!</h2>");
+      document.write("<h4>Detail Transaksi:</h4>");
+      document.write('<ul id="transactionDetails"></ul>');
+      document.write(
+        "<p>Terima kasih atas pesanan Anda. Kami akan segera memproses transaksi Anda.</p>"
+      );
+      document.write("<\/div>");
+
+      document.write("<script>");
+      document.write(
+        "var urlParams = new URLSearchParams(window.location.search);"
+      );
+      document.write("var transactionData = [");
+      document.write('{ label: "Nama", value: urlParams.get("nama") },');
+      document.write('{ label: "Alamat", value: urlParams.get("alamat") },');
+      document.write(
+        '{ label: "Nomor Telepon", value: urlParams.get("nomorhp") },'
+      );
+      document.write(
+        '{ label: "Tanggal Pesan", value: urlParams.get("tanggalPesan") },'
+      );
+      document.write(
+        '{ label: "Catatan Tambahan", value: urlParams.get("catatan") },'
+      );
+      document.write('{ label: "Mobil", value: urlParams.get("namaMobil") }');
+      document.write("];");
+      document.write(
+        'var transactionList = document.getElementById("transactionDetails");'
+      );
+      document.write("transactionData.forEach(function(item) {");
+      document.write('var listItem = document.createElement("li");');
+      document.write(
+        "listItem.innerHTML = '<strong>' + item.label + ':</strong> ' + item.value;"
+      );
+      document.write("transactionList.appendChild(listItem);");
+      document.write("});");
+      document.write("<\/script>");
+    </script>
+
+    <script src="assets/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+
+    <footer class="bg-dark text-white p-2 text-center mt-5">
+      <div class="container">
+        <p>&copy; 2023 RIFKI MAULANA | NIM: A2.2100111.</p>
+      </div>
+    </footer>
+  </body>
+</html>

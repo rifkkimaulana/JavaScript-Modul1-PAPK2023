@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.jpg"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Rental Mobil</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:600,700"
+    />
+  </head>
+  <body class="lead">
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="./index.html">
+        <img
+          src="./assets/images/logo.png"
+          width="40"
+          height="30"
+          class="d-inline-block align-top"
+          alt="Logo"
+        />
+        APLIKASI RENTAL MOBIL
+      </a>
+    </nav>
+
+    <div class="card mt-4 mb-5">
+      <div class="card-header">
+        <h3 class="card-title text-center">
+          <i>Menampilkan Daftar Mobil</i>
+        </h3>
+      </div>
+      <div class="card-body">
+        <button
+          class="btn btn-primary float-right mb-2"
+          data-toggle="modal"
+          data-target="#addModal"
+        >
+          Tambah Baru
+        </button>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="text-center">NO</th>
+                <th class="text-center">Merek</th>
+                <th class="text-center">Model</th>
+                <th class="text-center">Warna</th>
+                <th class="text-center">Tahun</th>
+                <th class="text-center">Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="carTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="modalContainer"></div>
+
+    <div
+      class="modal fade"
+      id="addModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="addModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addModalLabel">Tambah Mobil Baru</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="addForm">
+              <div class="form-group">
+                <label for="addMerek">Merek:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="addMerek"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="addModel">Model:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="addModel"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="addWarna">Warna:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="addWarna"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="addTahun">Tahun:</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="addTahun"
+                  required
+                />
+              </div>
+              <button type="button" class="btn btn-primary" onclick="saveAdd()">
+                Simpan
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <footer class="bg-dark text-white p-2 text-center mt-auto">
+      <div class="container">
+        <p>&copy; 2023 RIFKI MAULANA | NIM: A2.2100111.</p>
+      </div>
+    </footer>
+  </body>
+</html>
