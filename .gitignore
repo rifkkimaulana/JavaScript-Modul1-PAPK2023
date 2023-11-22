@@ -10,6 +10,10 @@
 #MS Word
 word_tugas/
 
+# Abaikan arsip file
+*.zip
+*.rar
+
 # OS X Thumbnails
 ._*
 
