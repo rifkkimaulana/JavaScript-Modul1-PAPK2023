@@ -8,7 +8,7 @@
 .LSOverride
 
 #MS Word
-*.docx
+.lms_upload
 
 # OS X Thumbnails
 ._*
