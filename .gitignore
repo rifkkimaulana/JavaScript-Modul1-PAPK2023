@@ -11,8 +11,7 @@
 word_tugas/
 
 # Abaikan arsip file
-*.zip
-*.rar
+arsip_files/
 
 # OS X Thumbnails
 ._*
