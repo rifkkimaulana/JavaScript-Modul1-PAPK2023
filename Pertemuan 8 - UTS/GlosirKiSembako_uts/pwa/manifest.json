@@ -1,0 +1,22 @@
+{
+    "name": "App GlosirKy",
+    "short_name": "Glosirky App",
+    "description": "Aplikasi Tema Glosir Sembako Html Javascript - PWA",
+    "icons": [
+      {
+        "src": "/images/favicon/logo.jpg",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "/images/favicon/logo.jpg",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#1F3641",
+    "background_color": "#ffffff",
+    "prefer_related_applications": false
+  }

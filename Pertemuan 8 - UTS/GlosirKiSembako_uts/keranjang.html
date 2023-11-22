@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="/images/favicon/logo.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/logo.jpg">
+
+    <title>GlosirKy Sembako</title>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/fontawesome-free-6.4.2-web/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Navbar Search dan Profile Akun-->
+    <div class="row justify-content-center p-0 m-0">
+        <div class="col-md-4 p-0 m-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+                <div class="container">
+                    <div class="col-8">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Cari Produk Sembako">
+                            <button class="btn btn-success"> <i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    <a href="/keranjang.html" class="btn btn-outline-success float-right">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="CountItemKeranjang">0</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="container mt-3">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h4 class="mb-0">Detail Pembelian</h4>
+
+                        <a href="/produk.html" class="btn btn-sm btn-primary">Tambah Produk Baru</a>
+                    </div>
+
+                    <div class="card-body" style="max-height: 50vh; overflow-y: auto;">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col">Nama Produk</th>
+                                        <th scope="col">Jumlah</th>
+                                        <th scope="col">Harga</th>
+                                        <th scope="col">Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="data_keranjang">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <h5>Total Harga: <span id="total_harga">0</span></h5>
+                    </div>
+                </div>
+
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="diskon">Voucher Tersedia:</label>
+                            <select class="form-control mt-2" id="diskonOption"> </select>
+                        </div>
+                        <small><b>Anda berhemat: <span id="hematInfo">RP. 0</span></b></small>
+                    </div>
+                </div>
+
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <h5>Total Pembayaran: <span id="total_pesanan">0</span></h5>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small>Silahkan lanjutkan pembayaran anda!</small>
+                            <a type="button" class="btn btn-success" href="/pages/transaksi-umum/index.html">Cekout
+                                Pesanan!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Bar Menu-->
+    <div class="row justify-content-center p-0 m-0 mt-3">
+        <div class="col-md-4 p-0 m-0">
+            <div class="container">
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+                    <a href="/index.html" class="btn btn-sm btn-outline-success" style="width: 80px;"> <i
+                            class="fas fa-home"></i><br>Home</a>
+                    <a href="/keranjang.html" class="btn btn-sm btn-outline-success" style="width: 80px;"> <i
+                            class="fas fa-shopping-cart"></i><br>Keranjang</a>
+                    <a href="/produk.html" class="btn btn-sm btn-outline-success" style="width: 80px;"> <i
+                            class="fas fa-box"></i><br>Produk</a>
+                    <a href="/riwayat.html" class="btn btn-sm btn-outline-success" style="width: 80px;"> <i
+                            class="fas fa-history"></i><br>Riwayat</a>
+                    <a href="/akun.html" class="btn btn-sm btn-outline-success" style="width: 80px;"> <i
+                            class="fas fa-user"></i><br>Akun</a>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Edit Item Keranjang -->
+    <div class="modal" id="modalEdit" tabindex="-1" aria-labelledby="modalEditLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEditLabel">Edit Item Keranjang</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formEdit" data-indeks="">
+                        <div class="mb-3">
+                            <label for="inputNamaProduk" class="form-label">Nama Produk</label>
+                            <input type="text" class="form-control" id="inputNamaProduk" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputJumlahBeli" class="form-label">Jumlah Pembelian</label>
+                            <input type="number" class="form-control" id="inputJumlahBeli" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputHargaProduk" class="form-label">Harga Produk</label>
+                            <input type="text" class="form-control" id="inputHargaProduk" readonly>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/assets/jquery/jquery-3.3.1.slim.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+
+    <script src="/assets/rifkkimaulana_js/js/count_keranjang.js"></script>
+    <script src="/assets/rifkkimaulana_js/js/keranjang.js"></script>
+    <script> window.onload = refreshTampilanKeranjang; </script>
+
+</body>
+
+</html>

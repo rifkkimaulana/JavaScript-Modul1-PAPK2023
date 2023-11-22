@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="/images/favicon/logo.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/logo.jpg">
+
+    <title>GlosirKy Sembako</title>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/fontawesome-free-6.4.2-web/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="row justify-content-center p-0 m-0">
+        <div class="col-md-4 p-0 m-0 vh-100">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+                <div class="container">
+                    <a href="/akun.html" class="btn btn-success btn-sm">
+                        <i class="fas fa-chevron-left"></i> Kembali
+                    </a>
+                </div>
+            </nav>
+
+            <div class="container mt-3">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h4 class="mb-0"> Pengaturan Profil</h4>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#tambahRekening"
+                            class="btn btn-sm btn-primary">Tambah Alamat</a>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Pemilik</th>
+                                    <th>Bank</th>
+                                    <th>No Rekening</th>
+                                    <th>Cabang</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        Rifki Maulana
+                                    </td>
+                                    <td>Mandiri</td>
+                                    <td>1310016635064</td>
+                                    <td>KCP WADO</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="tambahRekening" tabindex="-1" aria-labelledby="tambahRekeningLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tambahRekeningLabel">Tambah Alamat Baru</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group mt-1">
+                        <label for="namapemilik">Nama Pemilik</label>
+                        <input type="text" class="form-control mt-1" id="namapemilik"
+                            placeholder="Masukan nama lengkap pemilik">
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="bank">Bank</label>
+                        <input type="text" class="form-control mt-1" id="bank" placeholder="Masukan bank terdaftar">
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="norekening">No Rekening</label>
+                        <input type="text" class="form-control mt-1" id="norekening" placeholder="Nomor rekening">
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="cabangpembukaan">Cabang Pembukaan</label>
+                        <input type="text" class="form-control mt-1" id="cabangpembukaan"
+                            placeholder="Cabang pembukaan rekening">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button class="btn btn-sm btn-primary">Tambah</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="/assets/jquery/jquery-3.3.1.slim.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

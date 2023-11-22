@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="/images/favicon/logo.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/logo.jpg">
+
+    <title>GlosirKy Sembako</title>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/fontawesome-free-6.4.2-web/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="row justify-content-center p-0 m-0">
+        <div class="col-md-4 p-0 m-0 vh-100">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+                <div class="container">
+                    <a href="/akun.html" class="btn btn-success btn-sm">
+                        <i class="fas fa-chevron-left"></i> Kembali
+                    </a>
+                </div>
+            </nav>
+
+            <div class="container mt-3">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h4 class="mb-0"> Pengaturan Alamat</h4>
+                        <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-sm btn-secondary dropdown-toggle"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Tambah Alamat
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#tambahAlamat">Tambah Alamat Baru</a>
+                                <a class="dropdown-item" href="#" onclick="simpanDataAlamat()">Tambah Alamat Default</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>Alamat</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabelAlamat">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="tambahAlamat" tabindex="-1" aria-labelledby="tambahAlamatLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tambahAlamatLabel">Tambah Alamat Baru</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="namaAlamat">Nama Alamat</label>
+                        <input type="text" class="form-control" id="namaAlamat" placeholder="Masukan nama alamat">
+                    </div>
+
+                    <div class="form-group mt-2">
+                        <label> Alamat Lengkap:</label>
+                        <textarea class="form-control mt-1" id="inputAlamat" rows="4"
+                            placeholder="Masukan alamat baru"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button class="btn btn-sm btn-primary" id="tambahButton">Tambah</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/assets/jquery/jquery-3.3.1.slim.min.js"></script>
+
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/rifkkimaulana_js/pengaturan_js/alamat.js"></script>
+
+</body>
+
+</html>

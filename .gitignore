@@ -27,6 +27,9 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
+#files index.lock
+*.index.lock
+
 # Windows shortcuts
 *.lnk
 

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="./images/favicon/logo.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/logo.jpg">
+
+    <title>GlosirKy Sembako</title>
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fontawesome-free-6.4.2-web/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Navbar Search dan Profile Akun-->
+    <div class="row justify-content-center p-0 m-0">
+        <div class="col-md-4 p-0 m-0 vh-100">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+                <div class="container">
+                    <div class="col-8">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Cari Produk Sembako">
+                            <button class="btn btn-success"> <i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    <a href="./keranjang.html" class="btn btn-outline-success float-right">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="CountItemKeranjang">0</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="container">
+                <div class="container mt-3">
+                    <h6 class="mt-2">Kirim Pesan</h6>
+
+                    <form>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="inputPesan" rows="4"
+                                placeholder="Tulis pesan Anda"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Bar Menu-->
+    <div class="row justify-content-center p-0 m-0 mt-3">
+        <div class="col-md-4 p-0 m-0">
+            <div class="container">
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+                    <a href="./index.html" class="btn btn-sm btn-outline-success" style="width: 80px;"> <i
+                            class="fas fa-home"></i><br>Home</a>
+                    <a href="./keranjang.html" class="btn btn-sm btn-outline-success" style="width: 80px;"> <i
+                            class="fas fa-shopping-cart"></i><br>Keranjang</a>
+                    <a href="./produk.html" class="btn btn-sm btn-outline-success" style="width: 80px;"> <i
+                            class="fas fa-box"></i><br>Produk</a>
+                    <a href="./riwayat.html" class="btn btn-sm btn-outline-success" style="width: 80px;"> <i
+                            class="fas fa-history"></i><br>Riwayat</a>
+                    <a href="./akun.html" class="btn btn-sm btn-outline-success" style="width: 80px;"> <i
+                            class="fas fa-user"></i><br>Akun</a>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/jquery/jquery-3.3.1.slim.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/rifkkimaulana_js/js/count_keranjang.js"></script>
+
+</body>
+
+</html>

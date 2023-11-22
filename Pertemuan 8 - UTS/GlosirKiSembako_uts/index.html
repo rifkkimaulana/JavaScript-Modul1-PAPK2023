@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" href="/images/favicon/logo.jpg" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/logo.jpg">
+
+  <title>GlosirKy Sembako</title>
+  <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/fontawesome-free-6.4.2-web/css/all.min.css">
+  <link rel="manifest" href="/pwa/manifest.json" />
+</head>
+
+<body>
+  <!-- Navbar Search dan Profile Akun-->
+  <div class="row justify-content-center p-0 m-0">
+    <div class="col-md-4 p-0 m-0 vh-auto">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+        <div class="container">
+          <div class="col-8">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Cari Produk Sembako">
+              <button class="btn btn-success"> <i class="fas fa-search"></i></button>
+            </div>
+          </div>
+          <a href="/keranjang.html" class="btn btn-outline-success float-right">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="CountItemKeranjang">0</span>
+          </a>
+        </div>
+      </nav>
+
+      <div id="bannerIndicator" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="/images/banner_sembako/ads1.jpg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/images/banner_sembako/ads2.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/images/banner_sembako/ads3.jpg" alt="Third slide">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#bannerIndicator" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#bannerIndicator" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class="container mt-3">
+        <h6>Apa yang anda butuhkan?</h6>
+        <div class="d-flex flex-wrap justify-content-between align-items-center py-3 ">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#modalJadwalSolat" class="btn btn-sm btn-success"
+            style="width: 80px;"> <i class="fas fa-mosque"></i><br>Jadwal
+            Sholat</a>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#modalIsiPulsa" class="btn btn-sm btn-success"
+            style="width: 80px;"> <i class="fas fa-mobile-alt"></i><br>Isi
+            Pulsa
+            Kartu</a>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#modalIsiPaket" class="btn btn-sm btn-success"
+            style="width: 80px;"> <i class="fas fa-shopping-cart"></i><br>Paket
+            Data</a>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#modalPLN" class="btn btn-sm btn-success"
+            style="width: 80px;"> <i class="fas fa-bolt"></i><br>Token
+            PLN</a>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#modalIsiPaketGame" class="btn btn-sm btn-success"
+            style="width: 80px;"> <i class="fas fa-gamepad"></i><br>Paket
+            Game</a>
+        </div>
+      </div>
+
+
+      <div class="container mt-2 border-top">
+        <h6 class="mt-2">Produk</h6>
+        <div id="produkindicator" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <div class="text-center">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#beras">
+                  <img src="/images/produk/beras.jpg" class="img-fluid rounded img-thumbnail" style="width: 90px;"
+                    alt="Beras">
+                </a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#uyah">
+                  <img src="/images/produk/garam.jpg" class="img-fluid rounded img-thumbnail" style="width: 90px;"
+                    alt="Garam">
+                </a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#gulaaren">
+                  <img src="/images/produk/gulaaren.jpg" class="img-fluid rounded img-thumbnail" style="width: 90px;"
+                    alt="Gula Aren">
+                </a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#kopihitamgajah">
+                  <img src="/images/produk/kopihitamgajah.jpg" class="img-fluid roundedimg-thumbnail"
+                    style="width: 90px;" alt="Kopi Hitam Gajah">
+                </a>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="text-center">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#tepung">
+                  <img src="/images/produk/tepung.jpg" class="img-fluid rounded img-thumbnail" style="width: 90px;"
+                    alt="Tepung">
+                </a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#miecabeijo">
+                  <img src="/images/produk/miecabeijo.jpg" class="img-fluid rounded img-thumbnail" style="width: 90px;"
+                    alt="Mie Cabe Ijo">
+                </a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#minyakgoreng">
+                  <img src="/images/produk/minyak goreng.jpg" class="img-fluid rounded img-thumbnail"
+                    style="width: 90px;" alt="Minyak Goreng">
+                </a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#susukaleng">
+                  <img src="/images/produk/susukaleng.jpg" class="img-fluid rounded img-thumbnail" style="width: 90px;"
+                    alt="Susu Kaleng">
+                </a>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="text-center">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#telur">
+                  <img src="/images/produk/telur.jpg" class="img-fluid rounded img-thumbnail" style="width: 90px;"
+                    alt="Telur">
+                </a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#tepung">
+                  <img src="/images/produk/tepung.jpg" class="img-fluid rounded img-thumbnail" style="width: 90px;"
+                    alt="Tepung">
+                </a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#gulaaren">
+                  <img src="/images/produk/gulaaren.jpg" class="img-fluid rounded img-thumbnail" style="width: 90px;"
+                    alt="Gula Aren">
+                </a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#kopihitamgajah">
+                  <img src="/images/produk/kopihitamgajah.jpg" class="img-fluid rounded img-thumbnail"
+                    style="width: 90px;" alt="Kopi Hitam Gajah">
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#produkindicator" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#produkindicator" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+      </div>
+
+      <div class="container mt-3 border-top">
+        <h6 class="mt-2">Brand</h6>
+        <div class="text-center">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#brand-1">
+            <img src="/images/brand/1.jpg" class="img-fluid rounded img-thumbnail mt-1"
+              style="width: 90px; height: 90px;" alt="Brand 1">
+          </a>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#brand-2">
+            <img src="/images/brand/2.jpeg" class="img-fluid rounded img-thumbnail mt-1"
+              style="width: 90px; height: 90px;" alt="Brand 2">
+          </a>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#brand-3">
+            <img src="/images/brand/3.jpg" class="img-fluid rounded img-thumbnail mt-1"
+              style="width: 90px; height: 90px;" alt="Brand 3">
+          </a>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#brand-4">
+            <img src="/images/brand/4.jpg" class="img-fluid rounded img-thumbnail mt-1"
+              style="width: 90px; height: 90px;" alt="Brand 4">
+          </a>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#brand-5">
+            <img src="/images/brand/5.jpeg" class="img-fluid rounded img-thumbnail mt-1"
+              style="width: 90px; height: 90px;" alt="Brand 5">
+          </a>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#brand-6">
+            <img src="/images/brand/6.jpg" class="img-fluid rounded img-thumbnail mt-1"
+              style="width: 90px; height: 90px;" alt="Brand 6">
+          </a>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#brand-7">
+            <img src="/images/brand/7.jpeg" class="img-fluid rounded img-thumbnail mt-1"
+              style="width: 90px; height: 90px;" alt="Brand 7">
+          </a>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#brand-8">
+            <img src="/images/brand/8.jpg" class="img-fluid rounded img-thumbnail mt-1"
+              style="width: 90px; height: 90px;" alt="Brand 8">
+          </a>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+  <!-- Bottom Bar Menu-->
+  <div class="row justify-content-center p-0 m-0 mt-3">
+    <div class="col-md-4 p-0 m-0">
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+          <a href="/index.html" class="btn btn-sm btn-outline-success" style="width: 80px;"> <i
+              class="fas fa-home"></i><br>Home</a>
+          <a href="/keranjang.html" class="btn btn-sm btn-outline-success" style="width: 80px;"> <i
+              class="fas fa-shopping-cart"></i><br>Keranjang</a>
+          <a href="/produk.html" class="btn btn-sm btn-outline-success" style="width: 80px;"> <i
+              class="fas fa-box"></i><br>Produk</a>
+          <a href="/riwayat.html" class="btn btn-sm btn-outline-success" style="width: 80px;"> <i
+              class="fas fa-history"></i><br>Riwayat</a>
+          <a href="/akun.html" class="btn btn-sm btn-outline-success" style="width: 80px;"> <i
+              class="fas fa-user"></i><br>Akun</a>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Jadwal Solat -->
+  <div class="modal fade" id="modalJadwalSolat" tabindex="-1" aria-labelledby="brandModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="brandModalLabel">Jadwal Sholat</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Waktu Sholat</th>
+                <th scope="col">Jadwal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Fajr</td>
+                <td>05:30 AM</td>
+              </tr>
+              <tr>
+                <td>Dhuhr</td>
+                <td>12:30 PM</td>
+              </tr>
+              <tr>
+                <td>Asr</td>
+                <td>03:45 PM</td>
+              </tr>
+              <tr>
+                <td>Maghrib</td>
+                <td>06:15 PM</td>
+              </tr>
+              <tr>
+                <td>Isha</td>
+                <td>08:00 PM</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Isi Pulsa -->
+  <div class="modal fade" id="modalIsiPulsa" tabindex="-1" aria-labelledby="brandModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="brandModalLabel">Silahkan masukan nomor tujuan</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">+62</span>
+            </div>
+            <input type="number" class="form-control" placeholder="8313064xxxx" aria-label="telp">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal Isi Paket Data -->
+  <div class="modal fade" id="modalIsiPaket" tabindex="-1" aria-labelledby="brandModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="brandModalLabel">Silahkan masukan nomor tujuan</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">+62</span>
+            </div>
+            <input type="number" class="form-control" placeholder="8313064xxxx" aria-label="telp">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Isi PLN Token -->
+  <div class="modal fade" id="modalPLN" tabindex="-1" aria-labelledby="brandModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="brandModalLabel">Silahkan masukan id pelanggan</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="input-group">
+
+            <input type="number" class="form-control" placeholder="id Pelanggan PLN" aria-label="telp">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Isi Paket GAME -->
+  <div class="modal fade" id="modalIsiPaketGame" tabindex="-1" aria-labelledby="brandModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="brandModalLabel">PAKET GAME</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Paket Bronze
+              <span class="badge bg-primary rounded-pill">$10</span>
+              <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                data-bs-target="#modalKonfirmasi">Beli</button>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Paket Silver
+              <span class="badge bg-primary rounded-pill">$20</span>
+              <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                data-bs-target="#modalKonfirmasi">Beli</button>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Paket Gold
+              <span class="badge bg-primary rounded-pill">$30</span>
+              <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                data-bs-target="#modalKonfirmasi">Beli</button>
+            </li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Brand -->
+  <div class="modal fade" id="brand-1" tabindex="-1" aria-labelledby="brandModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="brandModalLabel">Detail - Genesis Group</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Genesis Group adalah perusahaan yang beroperasi di berbagai sektor bisnis, termasuk properti,
+            energi, dan makanan dan minuman. Mereka dikenal sebagai perusahaan konglomerat dengan portofolio
+            bisnis yang beragam.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="brand-2" tabindex="-1" aria-labelledby="brandModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="brandModalLabel">Detail - CocaCola</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Coca-Cola adalah salah satu merek minuman ringan paling terkenal di dunia. Mereka dikenal karena
+            produk ikonik mereka, Coca-Cola, yang merupakan minuman bersoda yang populer. Coca-Cola juga
+            memiliki berbagai merek minuman lainnya.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="brand-3" tabindex="-1" aria-labelledby="brandModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="brandModalLabel">Detail - Bunga Sari</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>PT Bungasari Flour Mills Indonesia merupakan perusahaan yang bergerak di bidang produksi tepung
+            terigu ternama di Indonesia dan merupakan tiga besar produsen terigu nasional.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="brand-4" tabindex="-1" aria-labelledby="brandModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="brandModalLabel">Detail - Antangin</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Antangin adalah merek minuman suplemen yang sering digunakan untuk membantu meredakan gejala
+            pilek dan meningkatkan sistem kekebalan tubuh.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="brand-5" tabindex="-1" aria-labelledby="brandModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="brandModalLabel">Detail - Garuda Food</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Garuda Food adalah perusahaan makanan dan minuman asal Indonesia. Mereka dikenal dengan berbagai
+            produk makanan ringan, termasuk biskuit, kacang, dan produk olahan susu.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="brand-6" tabindex="-1" aria-labelledby="brandModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="brandModalLabel">Detail - P&G</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Procter & Gamble (P&G) adalah perusahaan multinasional yang berfokus pada berbagai produk
+            konsumen, termasuk produk perawatan pribadi, produk kebersihan, dan produk rumah tangga. Mereka
+            memiliki banyak merek terkenal seperti Pampers, Tide, Gillette, dan banyak lagi.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="brand-7" tabindex="-1" aria-labelledby="brandModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="brandModalLabel">Detail - Tempo Scan</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Tempo Scan adalah perusahaan Indonesia yang bergerak di berbagai sektor, termasuk farmasi, produk
+            kesehatan, dan konsumer. Mereka dikenal dengan produk-produk kesehatan dan kecantikan.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="brand-8" tabindex="-1" aria-labelledby="brandModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="brandModalLabel">Detail - Unilever</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Unilever adalah perusahaan konsumer global yang menghasilkan berbagai produk, termasuk makanan,
+            minuman, kecantikan, dan perawatan rumah tangga. Mereka memiliki merek-merek terkenal seperti
+            Dove, Knorr, Lipton, dan banyak lagi.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/jquery/jquery-3.3.1.slim.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/rifkkimaulana_js/js/count_keranjang.js"></script>
+  <script src="/pwa/register.js"></script>
+
+</body>
+
+</html>
