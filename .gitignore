@@ -19,7 +19,6 @@ arsip_files/
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
-Desktop.ini
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
@@ -108,6 +107,9 @@ _modules/*
 # Jetbrains editors (PHPStorm, etc)
 .idea/
 *.iml
+
+# Google drive temp
+desktop.ini
 
 # Netbeans
 nbproject/
