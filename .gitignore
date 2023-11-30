@@ -30,7 +30,7 @@ $RECYCLE.BIN/
 *.msp
 
 #files index.lock
-*.index.lock
+#*.index.lock
 
 # Windows shortcuts
 *.lnk
